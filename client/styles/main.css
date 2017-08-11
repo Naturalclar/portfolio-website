@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import "base/_global.css";
+@import "partials/_header.css";
+@import "partials/_home.css";
+@import "partials/_animations.css";

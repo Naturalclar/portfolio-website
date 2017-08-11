@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #646464;
+}
+
+.header-title {
+  margin: 0;
+  padding: 0.5rem;
+  width: auto;
+  font-family: 'Lobster','cursive';
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.header-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: auto;
+  transition: all .5s;
+  margin: 0 0.1rem;
+  border-radius:0.75rem;
+}
+
+.header-menu-item:hover {
+  text-shadow: 1px 1px;
+  transition: all .5s;
+}
