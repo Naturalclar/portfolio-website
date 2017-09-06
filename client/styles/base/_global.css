@@ -1,11 +1,17 @@
-html{
-  font-size: 1rem;
-  font-family: 'Source Sans Pro', 'Roboto', sans-serif;
-  color: #232323;
+/* global */
+html {
+  font-size: 16px;
+  min-height: 100%;
 }
 
-body{
+body {
+  color: var(--primary-color-text);
+  font-family: 'Press Start 2P', cursive;
+  background: 
+    linear-gradient(
+      to bottom, 
+      var(--primary-color), 
+      var(--secondary-color) 100%) 
+    no-repeat fixed;
   margin: 0;
-  padding: 0;
-  background-color: #ededed;
 }

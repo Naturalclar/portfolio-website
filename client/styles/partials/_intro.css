@@ -1,0 +1,105 @@
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+  &_header {
+    font-family: 'Indie Flower', cursive;
+    font-size:2.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  
+  &_textbox {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+    width: 15rem;
+    border: solid 2px var(--primary-color-text);
+    border-radius: 10px;
+    padding: 1rem;
+    @media(min-width:640px) {
+      width: 30rem;
+      font-size: 1.1rem;
+    }
+  }
+  &_text {
+    margin: 1rem auto;
+    width: 21em;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 1.5s steps(60, end); 
+    
+    &:nth-child(2) {
+      width: 26em;
+      animation: type 2s steps(60, end) 2s both;
+      opacity: 0;
+    }
+        
+  }
+  
+  &_triangle {
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid var(--primary-color-text);
+    align-self: flex-end;
+    animation: blink 2s step-end 3.5s infinite both;
+    opacity: 0;
+  }
+  
+  &_social_list {
+    display:flex;
+    align-items: center;
+    margin: 1rem 0;
+    animation: fadeIn 3s ease-in 3s both;
+    opacity: 0;
+  }
+  
+  &_social_link {
+    margin: 0.5rem;
+    color: var(--primary-color-text); 
+  }
+  
+}
+
+@keyframes type{ 
+  from { 
+    opacity: 1;
+    width: 0; 
+  } 
+  to { 
+    opacity: 1;
+  }
+} 
+
+
+@keyframes fadeIn{
+  from, 50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;  
+  }
+}
+
+@keyframes appear {
+  from {
+    display: none;
+  }
+  to {
+    display:block;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}

@@ -21,10 +21,18 @@ module.exports = {
         test:/\.css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: {importLoaders: 1}},
-          'postcss-loader'
+          { loader: 'css-loader', options: { importLoaders:1 } },
+          'postcss-loader',
         ],
-      }
+      },
+      {
+        test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'url-loader?limit=10000&mimeyupe=application/font-woff',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: 'file-loader?name=./[name].[ext]',
+      },
     ]
   },
   plugins: [

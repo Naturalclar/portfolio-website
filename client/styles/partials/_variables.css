@@ -1,3 +1,8 @@
---primary{
-  color: #232323;
+/* variables */
+:root {
+  --primary-color: #00ae76;
+  --secondary-color: #aaeecc;
+  --primary-color-text: #fff;
 }
+
+@custom-media --medium (min-width: 640px);

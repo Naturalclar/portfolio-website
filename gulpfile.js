@@ -4,6 +4,17 @@ const clean = require('gulp-rimraf');
 const webpack = require('webpack');
 const browserSync = require('browser-sync').create();
 
+
+gulp.task('assets', (callback) => {
+  gulp.src('assets/**/*').pipe(gulp.dest('public/'));
+  callback();
+});
+
+gulp.task('clean', (callback) => {
+  gulp.src('public/*').pipe(clean());
+  callback();
+});
+
 gulp.task('scripts', (callback) => {
   webpack(require('./webpack.config.js'), (err, stats) => {
     if (err) {
@@ -36,6 +47,11 @@ gulp.task('watch', () => {
   watch('./client', () => {
     gulp.start('autoRefresh');
   });
+
+  watch('./assets', () => {
+    gulp.start('assets');
+  });
+
 });
 
 gulp.task('autoRefresh', ['scripts'], () => {

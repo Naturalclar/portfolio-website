@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
-import 'animate.css/animate.css'
+import 'font-awesome/css/font-awesome.css';
 import './styles/main.css';
 
 class Main extends React.Component {
